@@ -1,0 +1,418 @@
+.mint-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+
+    width: 80%;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 30px;
+
+    @media screen and (max-width : 576px) {
+        width: 95%;
+        margin-top: 10px;
+    }
+
+    .mint-card {
+        border-radius: 20px;
+        padding: 20px 20px 20px;
+        width: 90%;
+        * {
+            font-family: mallory, sans-serif;
+        }
+
+        position: relative;
+        z-index: 2;
+
+        // @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+        //   //  background: url("../../assets/image/bg.jpg");
+        // }
+
+        // @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+        // //    background: url("../../assets/image/bg.jpg");
+        // }
+
+        background-color: rgba(235, 236, 240, 0.6);
+        background: rgba(21, 25, 56, 0.6);
+        //  background-color: transparent;
+        border: 1px solid hsla(0, 0%, 100%, .07);
+
+
+        @media screen and (max-width: 768px) {
+            width: 100%;
+            padding: 20px 20px 20px;
+        }
+        .mint-card-header {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            h1 {
+                color: #ed4037;
+                margin-left: 20px;
+                font-size: 30px;
+                font-weight: 700;
+            }
+            p {
+                margin-top: 10px;
+                font-size: 16px;
+                color: #fffffff0;
+            }
+            .header-balance-card {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                padding: 0 25px;
+                border: 1px solid white;
+                border-radius: 15px;
+                margin-left: 30px;
+                margin-top: 25px;
+                p {
+                    margin: 5px 0;
+                    font-size: 20px;
+                    font-weight: 800;
+                    line-height: 1;
+                    padding: 0 20px 3px;
+                }
+            }
+            @media screen and (max-width: 768px) {
+                flex-direction: column;
+                align-items: flex-start;
+                & > div:nth-child(2) {
+                    margin: 0;
+                    margin-top: 20px;
+                    width: 100%;
+                }
+            }
+        }
+        .MuiButton-contained {
+            background-color: #ed4037;
+            color: white;
+            text-transform: capitalize;
+            padding: 11px 25px;
+            font-weight: 700;
+        }
+        .stepper-wrapper {
+            width: 100%;
+            .MuiStepper-root {
+                padding: 40px 80px 20px !important;
+                background-color: transparent;
+                @media screen and (max-width: 576px) {
+                    padding: 20px 20px !important;
+                }
+                .MuiStepLabel-label {
+                    color: #eee;
+                    font-weight: bold;
+                }
+                .MuiStepLabel-iconContainer {                   
+                    .MuiStepIcon-active {
+                        fill: #ed4037 !important;
+                    }
+                    .MuiStepIcon-completed {
+                        fill: #ed4037 !important;
+                    }
+                    svg {
+                        fill: #ffffff80 !important;
+                    }
+                }
+            }
+            .stepper-views {
+                contain: content;
+                width: 100%;
+                .stepper-view {                    
+                    transition: all 0.3s;
+                    opacity: 0;
+                    display: none;
+                    &.show {
+                        opacity: 1;
+                        display: flex;
+                    }
+                }
+                .stepper-1 {
+                    width: 100%;
+                    flex-direction: column;
+                    align-items: center;
+                    .file-dragger {
+                        cursor: pointer;
+                        color: white;
+                        text-align: center;
+                        padding: 20px;
+                        margin-bottom: 20px;
+                        border: 1px dashed #ffffff80;
+                        border-radius: 10px;
+                        h1,
+                        h4,
+                        p {
+                            margin: 0;
+                            font-weight: 800;
+                        }
+                        h1 {
+                            font-size: 26px;
+                            margin-bottom: 20px;
+                        }
+                        h4 {
+                            font-size: 18px;
+                            margin-top: 20px;
+                            margin-bottom: 15px;
+                        }
+                        .upload-icon {
+                            width: 70px;
+                            height: 70px;
+                            margin: auto;
+                            font-size: 26px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            background-color: #ffffff80;
+                            padding: 10px;
+                            border-radius: 50%;
+                        }
+                        p {
+                            font-size: 14px;
+                            color: #ffffff80;
+                        }
+                    }
+                }
+                .stepper-2,
+                .stepper-3 {
+                    justify-content: space-between;
+                    color: white;
+                    h1,
+                    h4,
+                    p {
+                        margin: 0;
+                    }
+                    .set-properties {
+                        .mint-btn-wrapper {
+                            width: 100%;
+                            margin: auto;
+                            display: flex;
+                            justify-content: center;
+                            & > :first-child {
+                                margin-right: 20px;
+                            }
+                            @media screen and (max-width: 375px) {
+                                & > :first-child {
+                                    margin-right: 0;
+                                    margin-bottom: 20px;
+                                }
+                                flex-direction: column;
+                            }
+                        }
+                        width: 55%;
+                        h1 {
+                            font-size: 24px;
+                            margin-bottom: 20px;
+                        }
+                        p {
+                            font-size: 16px;
+                            font-weight: bold;
+                            margin-bottom: 30px;
+                        }
+                        h4 {
+                            font-size: 14px;
+                            color: #ffffff80;
+                        }
+
+                        .MuiTextField-root {
+                            margin-top: 20px;
+                            width: 100%;
+                            .MuiFormLabel-root {
+                                color: white;
+                            }
+                            .MuiFilledInput-input {
+                                color: white;
+                            }
+                        }
+                        .MuiFilledInput-root {
+                            border: 1px solid #ffffff80;
+                            &.Mui-focused {
+                                border: 1px solid #ed4037;
+                            }
+                        }
+                        .MuiFormLabel-root.Mui-focused {
+                            color: #ed4037;
+                        }
+                        .MuiFilledInput-underline:after {
+                            border-bottom: none;
+                            border: 1px solid #ed4037;
+                        }
+                        .agree-checkbox {
+                            padding: 20px;
+                            .MuiCheckbox-root {
+                                color: #fff;
+                            }
+                            .MuiCheckbox-colorSecondary.Mui-checked:hover {
+                                background-color: #ffffff20;
+                            }
+                        }
+                    }
+                    .nft-preview {
+                        width: 40%;
+                        .nft-preview-card {
+                            width: 100%;
+                            border-radius: 14px;
+                            background-color: #373737;
+                            box-shadow: 0px 0px 15px rgba(0, 0, 0 , 0.1);
+                            contain: content;
+                            height: fit-content;
+                            img,
+                            video,
+                            audio {
+                                width: 100%;
+                            }
+                            .nft-info {
+                                span {
+                                    color: #ffffff80;
+                                }
+                                padding: 10px 20px;
+                            }
+                        }
+                    }
+                    .wallet-address {
+                        display: flex;
+                        align-items: center;
+                        width: 90%;
+                        margin: auto;
+                        padding: 10px;
+                        box-shadow: 0 0 5px 5px #00000050;
+
+                        border-radius: 30px;
+                        svg {
+                            margin-right: 10px;
+                        }
+                    }
+                    .mint-progress-bar {
+                        width: 100%;
+                        height: 10px;
+                        border-radius: 10px;
+                        background-color: white;
+                        position: relative;
+                        contain: content;
+                        #mint-progress-bar {
+                            height: 10px;
+                            position: absolute;
+                            background-color: #ed4037;
+                            transition: all 0.3s;
+                            width: 0%;
+                        }
+                    }
+                    @media screen and (max-width: 768px) {
+                        flex-direction: column;
+                        .set-properties {
+                            order: 2;
+                            width: 100%;
+                        }
+                        .nft-preview {
+                            order: 1;
+                            max-width: 400px;
+                            width: 100%;
+                            margin-bottom: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.buy-anft-modal {
+    background: url("../../assets/image/bg.jpg");
+    // backdrop-filter: blur(20px);
+    border-radius: 20px;
+    width: 100%;
+    position: absolute;
+    max-height: 100%;
+    overflow: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+
+
+    @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+        .MuiBackdrop-root {
+            background: rgba(100, 100, 100, 0.1) !important;
+            backdrop-filter: blur(33px) !important;
+            -webkit-backdrop-filter: blur(33px) !important;
+        }
+    }
+
+    /* slightly transparent fallback for Firefox (not supporting backdrop-filter) */
+    @supports not ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+        .MuiBackdrop-root {
+            background: rgba(0, 0, 0, 0.8);
+        }
+    }
+    
+    & > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    * {
+        font-family: mallory, sans-serif;
+    }
+
+    .buy-from {
+        margin-bottom: 20px;
+        background-color: #00000050;
+        transition: all 0.3s;
+        cursor: pointer;
+        &:hover {
+            background-color: #00000080;
+            box-shadow: 0 0 10px 10px #ffffff10;
+        }
+        padding: 10px;
+        width: 80%;
+        border-radius: 40px;
+        display: flex;
+        font-weight: 800;
+        font-size: 16px;
+        align-items: center;
+        .modal-logo {
+            width: 50px;
+            margin-right: 20px;
+            height: 50px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    .modal-action {
+        width: 50%;
+        padding-top: 10px;
+        .modal-btn-wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            .bond-table-btn {
+                background: rgba(255, 255, 255, 0.2);
+                cursor: pointer;
+                border: 1px solid #767676;
+                border-radius: 10px;
+                padding: 10px 35.5px;
+                text-align: center;
+
+                &:hover {
+                    border: 1px solid rgba(255, 255, 255, 0.6);
+                }
+
+                p {
+                    font-family: Montserrat Semibold;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 16px;
+                    color: #ffffff;
+                }
+            }
+        }
+    }  //overflow: scroll;
+}

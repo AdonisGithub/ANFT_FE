@@ -1,0 +1,300 @@
+.spoils-view {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        margin: 0;
+    }
+
+    display: flex;
+    align-items: center;
+    margin: auto;
+    flex-direction: column;
+    padding-top: 30px;
+    overflow: hidden;
+    // overflow-x: hidden;
+    width: 75%;
+
+    @media screen and (max-width: 576px) {
+        width: 95%;
+    }
+
+    max-width: 1000px;
+    margin-top: -20px;
+
+
+    .reward-dashboard {
+     
+        border-radius: 20px;
+        min-width: 100%;
+        min-height: 230px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: rgba(235, 236, 240, 0.6);
+        background: rgba(21, 25, 56, 0.6);
+        //  background-color: transparent;
+        border: 1px solid hsla(0, 0%, 100%, .07);
+        padding-top: 20px;
+       
+        box-sizing: content-box;
+
+        .bignum-view {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: -10px;
+        }
+
+
+        h4 {
+            color: #FFF;
+        }
+
+        .dashboard-title {
+            font-family: poppins, sans-serif;
+            font-weight: 700;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .dashboard-value {
+            font-family: poppins, sans-serif;
+            font-weight: 700;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            .smaller {
+                font-size: 35px;
+                font-weight: 800;
+                line-height: 47px;
+            }
+
+            .bigger {
+                font-size: 55px;
+                letter-spacing: -1px;
+                font-weight: 800;
+                line-height: 75px;
+                font-family: system-ui;
+            }
+
+            .normal {
+                font-size: 32px;
+                font-weight: 800;
+                letter-spacing: -1px;
+                line-height: 50px;
+                font-family: sans-serif;
+                margin-bottom: 10px;
+            }
+        }
+
+        .circular-progress-bar {
+    
+            display: flex;
+          //  justify-content: center;
+            align-items: center;
+            width: 160px;
+            height: 160px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 10px;
+     
+            .CircularProgressbar-path {
+               stroke: rgb(204, 196, 196);
+            //  stroke: rgb(15, 133, 230);
+            }
+
+      
+     
+            .rebase-timer {
+                top: 55px;
+                left: 35px;
+                position: absolute;
+                z-index: 10;
+                color: #FFF;
+             //   color: rgb(15, 133, 230);
+                font-family: poppins, sans-serif;
+
+                .rebase-timer-day {
+                   padding-left: 7px;
+                   padding-bottom: 10px; 
+                   font-size: 20px;
+                   font-weight: bold;
+                }
+
+                .rebase-timer-seconds {
+                    padding-top: 20px;
+                    font-size: 24px;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .rebase-circle-text {
+            // h4 {
+            //     color:rgb(15, 133, 230);
+            // }
+            @media screen and (max-width: 576px) {
+                justify-content: center;
+            }
+        }
+    }
+
+
+
+    .chart-view {
+        border-radius: 20px;
+        min-height: 350px;
+        background-color: rgba(235, 236, 240, 0.6);
+        background: rgba(21, 25, 56, 0.6);
+        // background-color: transparent ;
+        border: 1px solid hsla(0, 0%, 100%, .07);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      
+
+        h4 {
+            color: #FFF;
+            font-family: poppins, sans-serif;
+            font-weight: 700;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #FFF;
+        }
+
+        .date-button-group {
+
+            display: flex;
+            flex-direction: row;
+            background-color: rgba(255, 255, 255, 0.09);
+            height: 30px;
+            width: 90%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+
+            .date-button {
+                width: 20%;
+                border: none;
+                border-radius: 5px;
+                padding: 3px;
+                background: transparent;
+                color: rgba(255, 255, 255, 0.35);
+
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.1);
+                }
+                &.active {
+                    color: #FFF;
+                }
+            }
+        }
+
+        .holding-chart {
+            width: 90%;
+            height: 250px;
+            margin-bottom: 30px;
+        }
+    }
+
+    .calculator-view {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h4 {
+            color: #FFF;
+            font-family: poppins, sans-serif;
+            font-weight: 700;
+          
+        }
+
+
+        .myreward-box {
+            width: 100%;
+            padding: 20px;
+            border-radius: 20px;
+            border: 1px solid hsla(0, 0%, 100%, .07);
+            background-color: rgba(235, 236, 240, 0.6);
+            background: rgba(21, 25, 56, 0.6);
+
+        }
+
+               
+        .formula-box {
+            width: 100%;
+            padding: 20px;
+            border-radius: 20px;
+            border: 1px solid hsla(0, 0%, 100%, .07);
+            background-color: rgba(235, 236, 240, 0.6);
+            background: rgba(21, 25, 56, 0.6);
+            margin-top: 20px;
+            min-height: 196px;
+
+            h3 {
+                color : #FFF;
+                font-size: 30px;
+                font-family: sans-serif;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            h4 {
+                color: #FFF;
+                font-size: 80px;
+                margin-top: auto;
+                margin-bottom: auto;
+                font-family: Courier;
+                font-weight: bolder;
+                text-align: center;
+                line-height: 120px;
+                // span {
+                //     color : #dd4b43;
+                // }
+            }
+        }
+
+        .dashboard-value {
+            font-family: poppins, sans-serif;
+            font-weight: 700;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            .smaller {
+                font-size: 35px;
+                font-weight: 800;
+                line-height: 47px;
+            }
+
+            .bigger {
+                font-size: 55px;
+                letter-spacing: -1px;
+                font-weight: 800;
+                line-height: 75px;
+                font-family: system-ui;
+            }
+
+            .normal {
+                font-size: 32px;
+                font-weight: 800;
+                letter-spacing: -1px;
+                line-height: 50px;
+                font-family: sans-serif;
+                margin-bottom: 10px;
+            }
+        }
+
+    }
+
+
+}

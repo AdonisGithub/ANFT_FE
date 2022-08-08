@@ -1,0 +1,23 @@
+.connect-button{
+
+    border: 1px solid #dd4b43;
+    background-color: #dd4b43;
+    border-radius: 6px;
+    padding: 7px 10px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+
+    .connect-button-progress{
+      margin-left: 10px;
+      margin-top: 4px;
+    }
+  
+    p{
+      font-family: Barlow;
+      font-weight: 900;
+      font-size: 18px;
+      color: white;
+    }
+  }
